@@ -38,8 +38,12 @@ You may choose to leverage docker compose to help provisioning a complete enviro
 ```bash
 git clone https://github.com/manat/docker-sonarqube.git
 cd docker-sonarqube
+cp .env.example .env
 docker-compose up
 ```
+
+#### Notes
+`.env` provides environment variables that can be used by docker-compose. This is to promote separation of config from the docker-compose file as it may varies across deployment. This project provides an example env file as `.env.example`.
 
 Point your browser to http://localhost:9000/ and login using the default username and password:
 
